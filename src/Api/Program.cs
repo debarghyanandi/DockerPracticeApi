@@ -16,7 +16,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+// remove host env Development check while testing in production.
+app.UseSwagger();
+app.UseSwaggerUI();
+
+
+//app.UseHttpsRedirection(); // cant use it as inside container no setup of ssl certificate
 
 app.UseAuthorization();
 

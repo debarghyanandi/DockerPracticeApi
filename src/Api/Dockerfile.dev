@@ -1,0 +1,9 @@
+FROM mcr.microsoft.com/dotnet/sdk:8.0
+
+WORKDIR /src/Api
+
+COPY src/Api/*.csproj .
+RUN dotnet  restore
+
+COPY src/Api/. .
+CMD ["dotnet", "watch", "run", "--urls", "http://0.0.0.0:8080"]
