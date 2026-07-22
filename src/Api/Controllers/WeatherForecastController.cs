@@ -29,5 +29,11 @@ namespace DockerPracticeApi.Controllers
             })
             .ToArray();
         }
+
+        [HttpGet("Get Docker")]
+        public string GetHello()
+        {
+            return "Hello Docker changed!!";
+        }
     }
 }
