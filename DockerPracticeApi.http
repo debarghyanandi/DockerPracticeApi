@@ -1,6 +1,0 @@
-@DockerPracticeApi_HostAddress = http://localhost:5131
-
-GET {{DockerPracticeApi_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
