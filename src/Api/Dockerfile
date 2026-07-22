@@ -3,7 +3,7 @@
 WORKDIR /src/Api
 
 COPY src/Api/*.csproj .
-RUN dotnet  restore
+RUN dotnet restore
 
 COPY src/Api/. .
 RUN dotnet publish -c Release -o /app/publish

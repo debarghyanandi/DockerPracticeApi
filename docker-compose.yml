@@ -3,13 +3,11 @@ services:
     build:
       context: .
       dockerfile: src/Api/Dockerfile.dev
+
     ports:
       - "5000:8080"
+
     volumes:
       - ./src/Api:/src/Api
-      - api-bin:/src/Api/bin
-      - api-bin:/src/Api/obj
-
-volumes:
-  api-bin:
-  api-obj:
+      - /src/Api/bin
+      - /src/Api/obj
